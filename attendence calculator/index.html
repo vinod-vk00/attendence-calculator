@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendence Calculator</title>
+</head>
+<body>
+    <h1>Attendence Calculator</h1>
+    <h2>Enter following details </h2>
+    <form class="form" style="text-align: center;" action="" name="cal">
+        number of class attended : <input type="number" name="noofclasses"><br>
+        Total number of class : <input type="number" name="totalclasses"><br>
+        Attendence percentage : <output type="text" name="result"><br>
+
+        <input type="button" value="Calculate" onclick="Calculate()">
+    </form>
+    <input type="button" value="Again" onclick="window.location.reload(true)">
+    <button onclick="window.location.reload(true)" style="color: white; background-color: blue;">Again</button>
+    <h1>hi</h1>
+
+    <script type="text/javascript">
+        function Calculate(){
+            var nca,tnc,res;
+            nca=Number(document.cal.noofclasses.value);
+            tnc=Number(document.cal.totalclasses.value);
+            res=(nca/tnc)*100;
+            document.cal.result.value=res;
+        }
+    </script>
+</body>
+</html>
